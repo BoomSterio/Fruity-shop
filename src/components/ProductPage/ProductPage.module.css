@@ -15,7 +15,7 @@
 
 .details {
     width: 70%;
-    margin-left: 15px;
+    margin-left: 30px;
 }
 
 .details h3 {
@@ -39,6 +39,7 @@
 }
 
 .editBtn {
+    font-size: 20px;
     color: #f19102;
     cursor: pointer;
 }
@@ -59,6 +60,9 @@
     }
     .image {
         width: 80%;
+    }
+    .details {
+        margin: 0;
     }
 }
 

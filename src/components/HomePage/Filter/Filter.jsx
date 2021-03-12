@@ -37,8 +37,8 @@ const Filter = ({sortBy, handleSortChange}) => {
                 <h3>Sort By:</h3>
                 <FormControl>
                     <RadioGroup value={sortBy} onChange={handleSortChange}>
-                        <FormControlLabel value="name" control={<Radio/>} label="Name"/>
-                        <FormControlLabel value="quantity" control={<Radio/>} label="Quantity"/>
+                        <FormControlLabel value="name" control={<Radio size={'small'}/>} label="Name"/>
+                        <FormControlLabel value="quantity" control={<Radio size={'small'}/>} label="Quantity"/>
                     </RadioGroup>
                 </FormControl>
             </div>

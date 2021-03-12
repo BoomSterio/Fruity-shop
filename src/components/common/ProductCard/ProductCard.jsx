@@ -1,13 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import s from './ProductCard.module.css'
 import {useHistory} from 'react-router'
 import {Button, IconButton} from '@material-ui/core'
 import {DeleteOutlined} from '@material-ui/icons'
 import {db} from '../../../firebase'
+import Dialog from '@material-ui/core/Dialog'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogContentText from '@material-ui/core/DialogContentText'
+import DialogActions from '@material-ui/core/DialogActions'
+import DialogTitle from '@material-ui/core/DialogTitle'
 
 const ProductCard = (props) => {
     const {id, inStock, imageUrl, name} = props.data
     const history = useHistory()
+    const [showDialog, setShowDialog] = useState(false)
 
     const deleteProduct = () => {
         db
@@ -30,7 +36,28 @@ const ProductCard = (props) => {
                     <Button onClick={() => history.push(`/product/${id}`)} style={{color: 'orange'}}>
                         Details
                     </Button>
-                    <IconButton onClick={deleteProduct} size={'small'}><DeleteOutlined color={'error'}/></IconButton>
+                    <IconButton onClick={() => setShowDialog(true)} size={'small'}><DeleteOutlined color={'error'}/></IconButton>
+                    <Dialog
+                        open={showDialog}
+                        onClose={() => setShowDialog(false)}
+                        aria-labelledby="confirm-dialog-title"
+                        aria-describedby="confirm-dialog-description"
+                    >
+                        <DialogTitle id="confirm-dialog-title">{"Product deleting"}</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText id="confirm-dialog-description">
+                                Confirm product deleting action. You won't be able to undo that action.
+                            </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={() => setShowDialog(false)} color="primary">
+                                Cancel
+                            </Button>
+                            <Button onClick={deleteProduct} color="primary" autoFocus>
+                                Delete
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
                 </div>
             </div>
         </div>
