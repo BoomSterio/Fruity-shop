@@ -44,3 +44,27 @@
 .toCart:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 676px) {
+    .sidebar {
+        flex-direction: row;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        padding: 0;
+    }
+    .logo {
+        display: none;
+    }
+    .bottom {
+        flex-direction: row;
+        margin: 0 15px;
+        align-items: center;
+    }
+    .total {
+        margin: 0 10px;
+    }
+    .toCart {
+        margin: 0;
+    }
+}

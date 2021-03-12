@@ -53,3 +53,12 @@
     justify-content: center;
 }
 
+@media (max-width: 767px) {
+    .info {
+        flex-direction: column;
+    }
+    .image {
+        width: 80%;
+    }
+}
+

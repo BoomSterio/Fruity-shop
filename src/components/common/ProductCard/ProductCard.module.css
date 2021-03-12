@@ -38,3 +38,10 @@
 .info h3 {
     margin-bottom: 10px;
 }
+
+@media (max-width: 767px) {
+    .product {
+        width: 100%;
+        max-width: 100%;
+    }
+}

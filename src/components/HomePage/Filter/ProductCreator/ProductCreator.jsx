@@ -36,7 +36,7 @@ const ProductCreator = ({editMode, handleClose}) => {
         setNewStock(e.target.value)
     }
 
-    function submitNewItem(e) {
+    function submitNewItem() {
         db
             .collection('products')
             .doc()

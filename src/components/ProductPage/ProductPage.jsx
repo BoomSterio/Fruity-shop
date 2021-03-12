@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import s from './ProductPage.module.css'
 import {useParams} from 'react-router'
 import {db} from '../../firebase'
-import {SideBySideMagnifier} from 'react-image-magnifiers'
+import {PictureInPictureMagnifier, MagnifierContainer, MagnifierPreview, MagnifierZoom} from 'react-image-magnifiers'
 import TableContainer from '@material-ui/core/TableContainer'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -58,9 +58,8 @@ const ProductPage = () => {
     return (
         <div className={s.page}>
             <div className={s.info}>
-                <SideBySideMagnifier
+                <PictureInPictureMagnifier
                     className={s.image}
-                    fillGapTop={59}
                     cursorStyle={'none'}
                     imageSrc={product.imageUrl}
                     imageAlt={product.imageUrl}
