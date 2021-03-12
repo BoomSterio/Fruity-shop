@@ -1,0 +1,25 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 4px 4px 8px -6px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px -6px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px -6px rgba(34, 60, 80, 0.2);
+}
+
+.info {
+    display: flex;
+    color: darkgrey;
+    font-size: 14px;
+}
+
+.name {
+    margin-right: 10px;
+}
+
+.text {
+    font-size: 18px;
+}

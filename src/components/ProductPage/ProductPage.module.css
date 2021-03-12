@@ -1,0 +1,55 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    padding: 25px 20px;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+}
+
+.details {
+    width: 70%;
+    margin-left: 15px;
+}
+
+.details h3 {
+    margin-bottom: 25px;
+}
+
+.image {
+    width: 30%;
+    object-fit: contain;
+}
+
+.image:hover {
+    -webkit-box-shadow: 4px 4px 8px -6px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px -6px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px -6px rgba(34, 60, 80, 0.2);
+}
+
+.specs {
+    max-width: 320px;
+    margin-bottom: 10px;
+}
+
+.editBtn {
+    color: #f19102;
+    cursor: pointer;
+}
+
+.editBtn:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

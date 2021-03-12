@@ -1,6 +1,5 @@
 .app {
   display: flex;
-  align-items: flex-start;
 }
 
 @media (prefers-reduced-motion: no-preference) {
